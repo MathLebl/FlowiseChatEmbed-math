@@ -8,7 +8,7 @@ type Props = ButtonTheme & {
 };
 
 const defaultButtonColor = '#3B81F6';
-const defaultIconColor = 'white';
+// const defaultIconColor = 'white';
 const defaultBottom = '20';
 const defaultRight = '20';
 

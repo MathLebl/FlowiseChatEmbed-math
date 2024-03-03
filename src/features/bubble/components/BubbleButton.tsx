@@ -7,7 +7,7 @@ type Props = ButtonTheme & {
   toggleBot: () => void;
 };
 
-const defaultButtonColor = '#3B81F6';
+const defaultButtonColor = '#0C9082';
 // const defaultIconColor = 'white';
 const defaultBottom = '20';
 const defaultRight = '20';
@@ -18,8 +18,8 @@ export const BubbleButton = (props: Props) => {
       part="button"
       onClick={() => props.toggleBot()}
       class={
-        `fixed shadow-md hover:scale-110 active:scale-95 transition-transform duration-200 flex justify-center items-center animate-fade-in` +
-        (props.size === 'large' ? ' w-21 h-16' : ' w-21 h-12') +
+        `fixed shadow-md hover:scale-110 rounded-xl p-2 active:scale-95 transition-transform duration-200 flex justify-center items-center animate-fade-in` +
+        (props.size === 'large' ? ' w-24 h-16' : ' w-24 h-12') +
         (props.isBotOpened ? 'scale-0 opacity-0' : 'scale-100 opacity-100')
       }
       style={{
@@ -27,6 +27,7 @@ export const BubbleButton = (props: Props) => {
         'z-index': 42424242,
         right: props.right ? `${props.right.toString()}px` : `${defaultRight}px`,
         bottom: props.bottom ? `${props.bottom.toString()}px` : `${defaultBottom}px`,
+        'padding': '8px',
       }}
     >
       <Show when={isNotDefined(props.customIconSrc)} keyed>

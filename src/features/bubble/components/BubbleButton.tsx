@@ -19,8 +19,7 @@ export const BubbleButton = (props: Props) => {
       onClick={() => props.toggleBot()}
       class={
         `fixed shadow-md hover:scale-110 rounded-xl p-2 active:scale-95 transition-transform duration-200 flex justify-center items-center animate-fade-in` +
-        (props.size === 'large' ? ' w-24 h-16' : ' w-24 h-12') +
-        (props.isBotOpened ? 'scale-0 opacity-0' : 'scale-100 opacity-100')
+        (props.size === 'large' ? ' w-24 h-16' : ' w-24 h-12')
       }
       style={{
         'background-color': props.backgroundColor ?? defaultButtonColor,

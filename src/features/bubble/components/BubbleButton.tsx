@@ -19,7 +19,7 @@ export const BubbleButton = (props: Props) => {
       onClick={() => props.toggleBot()}
       class={
         `fixed shadow-md hover:scale-110 rounded-xl p-2 active:scale-95 transition-transform duration-200 flex justify-center items-center animate-fade-in` +
-        (props.size === 'large' ? ' w-24 h-16' : ' w-24 h-12')
+        (props.size === 'large' ? ' w-32 h-16' : ' w-32 h-12')
       }
       style={{
         'background-color': props.backgroundColor ?? defaultButtonColor,
@@ -45,13 +45,13 @@ export const BubbleButton = (props: Props) => {
         </svg> */}
         <span
           class={props.isBotOpened ? 'scale-0 opacity-0' : 'scale-100 opacity-100'}
-          //  style={{
-          //   'background-color': props.backgroundColor ?? defaultButtonColor,
-          //   'z-index': 42424242,
-          //   right: props.right ? `${props.right.toString()}px` : `${defaultRight}px`,
-          //   bottom: props.bottom ? `${props.bottom.toString()}px` : `${defaultBottom}px`,
-          //   padding: '8px',
-          // }}
+           style={{
+            'color': '#fff',
+            'z-index': 42424242,
+            right: props.right ? `${props.right.toString()}px` : `${defaultRight}px`,
+            bottom: props.bottom ? `${props.bottom.toString()}px` : `${defaultBottom}px`,
+            padding: '8px',
+          }}
         >
           Une question ?
         </span>

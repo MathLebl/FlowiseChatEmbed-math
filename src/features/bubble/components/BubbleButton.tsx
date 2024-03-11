@@ -18,12 +18,13 @@ export const BubbleButton = (props: Props) => {
       part="button"
       onClick={() => props.toggleBot()}
       class={
-        `fixed shadow-md hover:scale-110 rounded-xl p-2 active:scale-95 transition-transform duration-200 flex justify-center items-center animate-fade-in` +
-        (props.size === 'large' ? ' w-32 h-16' : ' w-32 h-12')
+        `fixed shadow-md hover:scale-110 rounded-xl p-2 active:scale-95 transition-transform duration-200 flex justify-center items-center animate-fade-in` 
+        // (props.size === 'large' ?  h-16' : ' w-32 h-12')
       }
       style={{
         'background-color': props.backgroundColor ?? defaultButtonColor,
         'z-index': 42424242,
+        width: "10rem",
         right: props.right ? `${props.right.toString()}px` : `${defaultRight}px`,
         bottom: props.bottom ? `${props.bottom.toString()}px` : `${defaultBottom}px`,
         padding: '8px',

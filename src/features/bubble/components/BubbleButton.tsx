@@ -45,8 +45,8 @@ export const BubbleButton = (props: Props) => {
         </svg> */}
         <span
           class={props.isBotOpened ? 'scale-0 opacity-0' : 'scale-100 opacity-100'}
-           style={{
-            'color': '#fff',
+          style={{
+            color: '#fff',
             'z-index': 42424242,
             right: props.right ? `${props.right.toString()}px` : `${defaultRight}px`,
             bottom: props.bottom ? `${props.bottom.toString()}px` : `${defaultBottom}px`,
